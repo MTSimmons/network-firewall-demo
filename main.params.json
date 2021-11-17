@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "DemoName": {
+      "value": "neu-netdemo"
+    },
+    "HubAddressPrefixes": {
+      "value": ["10.10.0.0/16"]
+    },
+    "HubSubnets": {
+      "value": [
+        {
+          "name": "sub0",
+          "properties": {
+            "addressPrefix":  "10.10.0.0/24"
+          }
+        },
+        {
+          "name": "sub1",
+          "properties": {
+            "addressPrefix":  "10.10.1.0/24"
+          }
+        }
+      ]
+    },
+    "SpokeAddressPrefixes": {
+      "value": ["10.20.0.0/16"]
+    },
+    "SpokeSubnets": {
+      "value": [
+        {
+          "name": "spokesub0",
+          "properties": {
+            "addressPrefix":  "10.20.0.0/24"
+          }
+        },
+        {
+          "name": "spokesub1",
+          "properties": {
+            "addressPrefix":  "10.20.1.0/24"
+          }
+        }
+      ]
+    }
+  }
+}
